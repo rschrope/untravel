@@ -1,0 +1,65 @@
+#bg {
+    position: fixed; 
+    top: -50%; 
+    left: -50%; 
+    width: 200%; 
+    height: 200%;
+  }
+#bg img {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    min-width: 50%;
+    min-height: 50%;
+  }
+.box{
+    padding:40px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+}
+.box h1{
+    color:#5c5b5b;
+    text-transform:uppercase;
+    font-weight:500;
+}
+.box input[type="text"],.box input[type="password"]{
+    border:0;
+    background:none;
+    display:block;
+    margin:20px auto;
+    text-align:center;
+    border:2px solid #5c5b5b;
+    padding:14px 10px;
+    width:130px;
+    outline:none;
+    color:black;
+    border-radius:15px;
+    transition:0.15s;
+}
+.box input[type="text"]:focus,.box input[type="password"]:focus{
+    width:140px;
+    border-color: white;
+}
+.box input[type="submit"]{
+    border:0;
+    background: none;
+    display:block;
+    margin:20px auto;
+    text-align:center;
+    border:2px solid #5c5b5b;
+    padding: 14px 40px;
+    outline: none;
+    color:#5c5b5b;
+    border-radius:15px;
+    transition:0.25s;
+    cursor:pointer;
+}
+.box input[tpe="submit"]:hover{
+    background: #2ecc71;
+}
