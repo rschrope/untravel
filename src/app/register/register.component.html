@@ -1,14 +1,16 @@
-<body class="box">
-    <form [formGroup]="registerForm" action="index.html" method="post">
-        <h1>Register</h1>
-        <input formControlName="email" type="text" placeholder="email" required>
-        <input formControlName="password" type="password" placeholder="password" required>
-        <input type="submit" name="" value="Login" (click)="register()">
-    </form>
+<body>
     <div class="center">
         <div style="display: inline-block;">
-            <span class="dark-theme">Don't have an account?</span><br>
-            <span class="plain-text-button dark-theme-dynamic" (click)="routeToLogin()">login</span>
+            <form class="box" [formGroup]="registerForm" action="index.html" method="post">
+                <h1>Register</h1>
+                <input formControlName="email" type="text" placeholder="email" required>
+                <input formControlName="password" type="password" placeholder="password" required>
+                <input type="submit" name="" value="Register" (click)="register()">
+            </form>
+            <div class="center">
+                <span class="dark-theme" style="padding-right: 10px;">Already have an account? </span>
+                <span class="plain-text-button dark-theme-dynamic" (click)="routeToLogin()">login</span>
+            </div>
         </div>
     </div>
 </body>

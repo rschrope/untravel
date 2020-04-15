@@ -1,14 +1,16 @@
-<body class="box">
-    <form action="index.html" method="post">
-        <h1>Login</h1>
-        <input type="text" placeholder="username">
-        <input type="password" placeholder="password">
-        <input type="submit" value="Login">
-    </form>
+<body>
     <div class="center">
         <div style="display: inline-block;">
-            <span class="dark-theme">Don't have an account?</span><br>
-            <span class="plain-text-button dark-theme-dynamic" (click)="routeToRegister()">register</span>
+            <form class="box" action="index.html" method="post">
+                <h1>Login</h1>
+                <input type="text" placeholder="username">
+                <input type="password" placeholder="password">
+                <input type="submit" value="Login">
+            </form>
+            <div class="center">
+                <span class="dark-theme" style="padding-right: 10px;">Don't have an account?</span><br>
+                <span class="plain-text-button dark-theme-dynamic" (click)="routeToRegister()">register</span>
+            </div>
         </div>
     </div>
 </body>
