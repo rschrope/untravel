@@ -1,3 +1,9 @@
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #bg {
     position: fixed; 
     top: -50%; 
@@ -63,4 +69,37 @@
 }
 .box input[tpe="submit"]:hover{
     background: #2ecc71;
+}
+
+.plain-text-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.light-theme-dynamic {
+    color: white;
+}
+
+.light-theme-dynamic:hover {
+    color: lightgray;
+}
+
+.dark-theme-dynamic {
+    color: #5c5b5b;
+}
+
+.dark-theme-dynamic:hover {
+    color: #747474;
+}
+
+.light-theme {
+    color: white;
+    cursor: default;
+}
+
+.dark-theme {
+    color: #5c5b5b;
+    cursor: default;
 }
