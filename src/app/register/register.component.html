@@ -1,11 +1,16 @@
 <body>
+    <div id="bg" style="z-index: -5;">
+        <img src="assets/img/traveler.jpg" alt="">
+      </div>
     <div class="center">
         <div style="display: inline-block;">
             <form class="box" [formGroup]="registerForm" action="index.html" method="post">
                 <h1>Register</h1>
-                <div id="firstlast"; style="display:flex;">
-                    <input formControlName="first" type="text" placeholder="First Name" required>
-                    <input formControlName="last" type="text" placeholder="Last Name" required>
+                <div id="first">
+                    <div style="display:flex;">
+                        <input formControlName="first" type="text" placeholder="First Name" required>
+                        <input formControlName="last" type="text" placeholder="Last Name" required>
+                    </div>
                 </div>
                 <input formControlName="username" type="text" placeholder="username" required>
                 <input formControlName="email" type="text" placeholder="email" required>
