@@ -19,4 +19,7 @@ export class HomepageComponent implements OnInit {
   routeToLogin() {
     this.router.navigate(['login']);
   }
+  routeToHome() {
+    this.router.navigate(['homepage']);
+  }
 }
