@@ -31,6 +31,7 @@
     text-transform:uppercase;
     font-family: 'Courier New', Courier, monospace;
     font-weight:500;
+    padding-top: 90px;
 }
 .box input[type="text"],.box input[type="password"]{
     border:0;
