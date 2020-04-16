@@ -59,14 +59,8 @@
     font-size: small;
 }
 
-.input-3 {
-    font-size: small;
-    padding: 0px;
-}
-
-.box button {
+.box button, .box input {
     display: block; 
-    width: 40%;
     height: 30px;
     border: 0;
     background:none;
@@ -81,32 +75,21 @@
     box-sizing: border-box;
 }
 
-.box input {
-    border:0;
-    background:none;
-    text-align:center;
-    border:2px solid #5c5b5b;
-    height: 25px;
-    line-height: 25px;
-    margin: auto;
-    margin-bottom: 10px;
-    outline:none;
-    color:black;
-    border-radius:15px;
-    transition:0.15s;
-    box-sizing: border-box;
+.box button {
+    background-color: darkgray;
+    width: 40%;
 }
 
-.box input[type="text"]:focus,.box input[type="password"]:focus{
+.box input {
+    margin-bottom: 10px;
+}
+
+.box input:focus,.box input[type="password"]:focus{
     border-color: white;
 }
 
-.box input[type="submit"]{
-    cursor:pointer;
-    background: #8d8d8d;
-}
-
 .box button[type="submit"]:hover{
+    cursor:pointer;
     background: #2ecc71;
 }
 
