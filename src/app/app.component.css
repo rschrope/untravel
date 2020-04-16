@@ -4,6 +4,14 @@
     justify-content: center;
 }
 
+.center-absolute {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+	margin: auto;
+}
+
 #bg {
     position: fixed; 
     top: -50%; 
@@ -22,52 +30,66 @@
     min-height: 50%;
   }
 
-.box{
+.box {
+    display: flex;
+    flex-direction: column;
     text-align:center;
+    width: 270px;
+    padding: 0px 15px 15px 15px;
     background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
+
 .box h1{
     color:black;
     text-transform:uppercase;
     font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
     font-weight:500;
-    padding-top: 90px;
 }
-.box input[type="text"],.box input[type="password"]{
-    border:0;
+
+.input-1 {
+    width: 100%;
+    font-size: small;
+}
+
+.input-2 {
+    width: 48%;
+    font-size: small;
+}
+
+.box button, .box input {
+    display: block; 
+    height: 30px;
+    border: 0;
     background:none;
-    display:block;
-    margin:20px auto;
+    line-height: 15px;
     text-align:center;
     border:2px solid #5c5b5b;
-    padding:14px 10px;
-    width:130px;
+    margin: auto;
     outline:none;
     color:black;
     border-radius:15px;
     transition:0.15s;
+    box-sizing: border-box;
 }
-.box input[type="text"]:focus,.box input[type="password"]:focus{
-    width:140px;
+
+.box button {
+    background-color: darkgray;
+    width: 40%;
+}
+
+.box input {
+    margin-bottom: 10px;
+}
+
+.box input:focus,.box input[type="password"]:focus{
     border-color: white;
 }
-.box input[type="submit"]{
-    border:0;
-    background:none;
-    display:block;
-    margin:20px auto;
-    text-align:center;
-    border:2px solid #5c5b5b;
-    padding:14px 10px;
-    width:130px;
-    outline:none;
-    color:black;
-    border-radius:15px;
-    transition:0.15s;
+
+.box button[type="submit"]:hover{
     cursor:pointer;
-    background: #8d8d8d;
-}
-.box input[type="submit"]:hover{
     background: #2ecc71;
 }
 
@@ -106,7 +128,13 @@
 h2{
     color:black;
 }
-#first{
-    color:#2ecc71;
-    padding: 10px;
+
+.input-standard-flex {
+    display: flex;
+    height: 25px;
+}
+
+.input-standard {
+    /* display: flex; */
+    height: 25px;
 }

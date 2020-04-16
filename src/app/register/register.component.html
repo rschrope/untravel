@@ -2,20 +2,18 @@
     <div id="bg" style="z-index: -5;">
         <img src="assets/img/traveler.jpg" alt="">
       </div>
-    <div class="center">
-        <div style="display: inline-block;">
+    <div class="center-absolute">
+        <div style="display: flex; flex-direction: column;">
             <form class="box" [formGroup]="registerForm" action="index.html" method="post">
                 <h1>Register</h1>
-                <div id="first">
-                    <div style="display:flex;">
-                        <input formControlName="first" type="text" placeholder="First Name" required>
-                        <input formControlName="last" type="text" placeholder="Last Name" required>
-                    </div>
+                <div style="display:flex; flex-direction: row;">
+                    <input style="margin-right: 4%;" class="input-2" formControlName="first" type="text" placeholder="First Name" required>
+                    <input class="input-2" formControlName="last" type="text" placeholder="Last Name" required>
                 </div>
-                <input formControlName="username" type="text" placeholder="username" required>
-                <input formControlName="email" type="text" placeholder="email" required>
-                <input formControlName="password" type="password" placeholder="password" required>
-                <input type="submit" name="" value="Register" (click)="register()">
+                <input class="input-1" formControlName="username" type="text" placeholder="username" required>
+                <input class="input-1" formControlName="email" type="text" placeholder="email" required>
+                <input class="input-1" formControlName="password" type="password" placeholder="password" required>
+                <button type="submit" (click)="register()">Register</button>
             </form>
             <div class="center">
                 <span class="dark-theme" style="padding-right: 10px;">Already have an account? </span>
