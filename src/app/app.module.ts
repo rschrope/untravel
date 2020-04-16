@@ -14,6 +14,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from "@angular/fire/database";
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { HomepageComponent } from './homepage/homepage.component';
+import { StartFinishComponent } from './start-finish/start-finish.component';
 
 @NgModule({
   imports: [
@@ -31,7 +32,8 @@ import { HomepageComponent } from './homepage/homepage.component';
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    HomepageComponent
+    HomepageComponent,
+    StartFinishComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
