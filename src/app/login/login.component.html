@@ -4,10 +4,10 @@
 <body>
     <div class="center-absolute">
         <div style="display: flex; flex-direction: column;">
-            <form class="box" action="index.html" method="post">
+            <form [formGroup]="loginForm" (ngSubmit)="login()" class="box" action="index.html" method="post">
                 <h1>Login</h1>
-                <input class="input-1" type="text" placeholder="username / email">
-                <input class="input-1" type="password" placeholder="password">
+                <input formControlName="email" [formControl]="emailFormControl" class="input-1" type="text" placeholder="email" required>
+                <input formControlName="password" [formControl]="passwordFormControl" class="input-1" type="password" placeholder="password" required>
                 <button type="submit">Login</button>
             </form>
             <div class="center">

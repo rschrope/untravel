@@ -10,8 +10,8 @@
                     <input style="margin-right: 4%;" class="input-2" formControlName="first" type="text" placeholder="First Name" required>
                     <input class="input-2" formControlName="last" type="text" placeholder="Last Name" required>
                 </div>
-                <input class="input-1" formControlName="username" type="text" placeholder="username" required>
-                <input class="input-1" formControlName="email" type="text" placeholder="email" required>
+                <input class="input-1" formControlName="username" [formControl]="emailFormControl" type="text" placeholder="username" required>
+                <input class="input-1" formControlName="email" [formControl]="passwordFormControl" type="text" placeholder="email" required>
                 <input class="input-1" formControlName="password" type="password" placeholder="password" required>
                 <button type="submit" (click)="register()">Register</button>
             </form>

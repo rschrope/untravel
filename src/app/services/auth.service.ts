@@ -22,7 +22,7 @@ export class AuthService {
   async login(email: string, password: string) {
     auth().signInWithEmailAndPassword(email, password).then(result => {
         if (this.user.emailVerified)
-          this.router.navigate(['home']);
+          this.router.navigate(['homepage']);
         else if (this.user)
           this.logout();
       }).catch(error => {
