@@ -105,3 +105,28 @@ nav[roll="second"] li:nth-child(2){
     padding:5px;
 }
 
+nav h4 {
+    color: rgb(226, 226, 226);
+}
+
+.nav-toolbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-button:hover {
+    color: white;
+}
+
+.nav-text-1 {
+    color: rgb(226, 226, 226);
+}
+
+.cursor-d {
+    cursor: default;
+}
+
+.cursor-p {
+    cursor: pointer;
+}
+

@@ -10,9 +10,18 @@
     <header>
         <div class="center">
             <nav roll="second">
-                <ul>
-                    <li><a routerLink="/login">Login</a></li>
-                    <li><a routerLink="/register">Sign up</a></li>
+                <ul class="nav-toolbar">
+                    <li class="nav-text-1 cursor-d" 
+                    *ngIf="authService && authService.user$ != undefined && authService.user$ != null">
+                        {{ (authService.user$ | async).username }}
+                    </li>
+                    <div *ngIf="authService && (authService.user$ === undefined || authService.user$ === null)">
+                        <li><a routerLink="/login">Login</a></li>
+                        <li><a routerLink="/register">Sign up</a></li>
+                    </div>
+                    <div *ngIf="authService && authService.user$ != undefined && authService.user$ != null">
+                        <li class="nav-text-1 cursor-p nav-button" (click)="logout()">Logout</li>
+                    </div>
                 </ul>
             </nav>
         </div>

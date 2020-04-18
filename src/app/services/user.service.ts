@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { AuthService } from  '../services/auth.service';
 import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 export class AppUser {
   id: string;
@@ -22,14 +22,8 @@ export class AppUser {
   providedIn: 'root'
 })
 export class UserService {
+  user$: Observable<AppUser>;
 
-  constructor( private afs: AngularFirestore, private authService: AuthService ) { }
+  constructor( private afs: AngularFirestore ) { }
 
-  async createUser(first, last, username, email) {
-    console.log("creating user")
-    let user = await this.authService.user;
-    let appUser = new AppUser(user.uid, first, last, username, email)
-    let appUserRef = this.afs.collection<AppUser>('users');
-    appUserRef.doc(user.uid).set(JSON.parse(JSON.stringify(appUser)));
-  }
 }
